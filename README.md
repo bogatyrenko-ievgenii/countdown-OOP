@@ -1,6 +1,6 @@
-Preview - https://bogatyrenko-ievgenii.github.io/simlpe-slider/
+Preview - https://bogatyrenko-ievgenii.github.io/countdown-OOP/
 
-It's a modular simple slider realized with OOP.
-It was created on Vanilla JS and CSS. Everyone can use it in own non-commertial project.
+It's a simple countdown realized with OOP, working with object "Date". It haven't any options yet.
+It was created on Vanilla JS and CSS.
 
 It's easy to modify.

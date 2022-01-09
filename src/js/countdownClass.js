@@ -1,12 +1,12 @@
 'use strict';
 
-class CountDownToRemaining {
-    constructor (endTime, {days, hours, minutes, seconds} ) {
+export class CountDownToRemaining {
+    constructor (endTime, {days, hours, minutes, seconds}) {
         this.endTime = endTime;
-        this.days = days;
-        this.hours = hours;
-        this.minutes = minutes;
-        this.seconds = seconds;
+        this.days = days; //selector
+        this.hours = hours; //selector
+        this.minutes = minutes; //selector
+        this.seconds = seconds; //selector
         this.setClock(this.getTimeToRemaining());
     }
 
@@ -30,9 +30,6 @@ class CountDownToRemaining {
         let time = Date.parse(this.endTime) - new Date();
         return time > 0 ? time : 0;
     }
-    
-
-
 
     setClock = (time) => {
         const addZero = (number) => {
@@ -48,13 +45,10 @@ class CountDownToRemaining {
         this.hours.innerHTML = hours;
         this.minutes.innerHTML = minutes;
         this.seconds.innerHTML = seconds;
-
     }
 
 
     getStart = () => {
-
-
         let time = 0;
 
         const setClock = setInterval(() => {
@@ -71,23 +65,7 @@ class CountDownToRemaining {
             clearInterval(setClock);
         }
     }
-    
 }
 
 
-window.addEventListener('DOMContentLoaded', () => {
-    const selectors = {
-        days: document.querySelector('#days'),
-        hours: document.querySelector('#hours'),
-        minutes: document.querySelector('#minutes'),
-        seconds: document.querySelector('#seconds'),
-    }
 
-    const d1 = new Date();
-    let date = d1.getDate();
-    let month = d1.getMonth();
-    let year = d1.getFullYear();
-
-    const countdown = new CountDownToRemaining(`${year}.${+month + 1}.${date + 2}`, selectors).getStart();
-
-})

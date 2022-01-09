@@ -15,6 +15,6 @@ window.addEventListener('DOMContentLoaded', () => {
     let month = d1.getMonth();
     let year = d1.getFullYear();
 
-    const countdown = new CountDownToRemaining(`${year}.${+month + 1}.${date + 2}`, selectors).getStart();
+    const countdown = new CountDownToRemaining(`${year}/${+month + 1}/${date + 2}`, selectors).getStart();
 
 })
